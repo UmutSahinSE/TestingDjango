@@ -6,5 +6,12 @@
   </head>
   <body>
     <p>Profile</p>
+    <div class="ProgrammingLanguages">
+        {% for language in langObjects %}
+          <div class="language">
+              <p>{{language.langName}} {{language.proficiency}} {{language.years}}</p>
+          </div>
+        {% endfor %}
+    </div>
   </body>
 </html>
