@@ -1,17 +1,20 @@
-<!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>Profile</title>
-  </head>
-  <body>
-    <p>Profile</p>
+{% extends 'baseTemplate.html' %}
+
+{% block uniqueBody %}
     <div class="ProgrammingLanguages">
+      <table>
+        <tr>
+          <th>Language Name </th>
+          <th>Proficiency </th>
+          <th>Years </th>
+        </tr>
         {% for language in langObjects %}
-          <div class="language">
-              <p>{{language.langName}} {{language.proficiency}} {{language.years}}</p>
-          </div>
+          <tr>
+            <td>{{language.langName}}</td>
+            <td>{{language.proficiency}}</td>
+            <td>{{language.years}}</td>
+          </tr>
         {% endfor %}
+      </table>
     </div>
-  </body>
-</html>
+{% endblock %}

@@ -1,0 +1,16 @@
+{% load static from staticfiles %}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <link rel="stylesheet" href="{% static 'profilePage.css' %}"/>
+    <meta charset="utf-8">
+    <title>Profile</title>
+  </head>
+  <body>
+    <div class="wrapper">
+        {% block uniqueBody %}
+        {% endblock %}
+    </div>
+  </body>
+</html>
